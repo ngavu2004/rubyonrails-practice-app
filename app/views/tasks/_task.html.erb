@@ -1,0 +1,8 @@
+<div id="<%= dom_id task %>">
+  <div>
+    <%= form_with url: update_task_path(task), method: :patch do |form| %>
+      <input type="checkbox" <%= task.finished_at ? "checked" : "" %> onchange="this.form.submit()">
+      <%= task.task %>
+    <% end %>
+  </div>
+</div>
